@@ -1,0 +1,21 @@
+obs
+
+90 raycasts
+x
+y
+rot
+seen player
+lastx
+lasty
+ammo
+ammoT
+
+act
+
+forward
+backward
+left
+right
+shoot
+reload
+change rotation
