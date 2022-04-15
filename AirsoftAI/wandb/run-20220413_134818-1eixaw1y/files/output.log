@@ -1,0 +1,784 @@
+Wrapping the env with a `Monitor` wrapper
+Wrapping the env in a DummyVecEnv.
+C:\Users\zacle\AppData\Local\Programs\Python\Python39\lib\site-packages\torch\cuda\__init__.py:52: UserWarning: CUDA initialization: CUDA unknown error - this may be due to an incorrectly set up environment, e.g. changing env variable CUDA_VISIBLE_DEVICES after program start. Setting the available devices to be zero. (Triggered internally at  ..\c10\cuda\CUDAFunctions.cpp:109.)
+  return torch._C._cuda_getDeviceCount() > 0
+---------------------------------
+| rollout/           |          |
+|    ep_len_mean     | 216      |
+|    ep_rew_mean     | 171      |
+| time/              |          |
+|    fps             | 36       |
+|    iterations      | 1        |
+|    time_elapsed    | 56       |
+|    total_timesteps | 653312   |
+---------------------------------
+------------------------------------------
+| rollout/                |              |
+|    ep_len_mean          | 216          |
+|    ep_rew_mean          | 171          |
+| time/                   |              |
+|    fps                  | 34           |
+|    iterations           | 2            |
+|    time_elapsed         | 117          |
+|    total_timesteps      | 655360       |
+| train/                  |              |
+|    approx_kl            | 0.0047869775 |
+|    clip_fraction        | 0.0367       |
+|    clip_range           | 0.2          |
+|    entropy_loss         | -11.8        |
+|    explained_variance   | 0.461        |
+|    learning_rate        | 0.0003       |
+|    loss                 | 665          |
+|    n_updates            | 3190         |
+|    policy_gradient_loss | -0.0054      |
+|    std                  | 0.902        |
+|    value_loss           | 2.52e+03     |
+------------------------------------------
+-----------------------------------------
+| rollout/                |             |
+|    ep_len_mean          | 264         |
+|    ep_rew_mean          | -301        |
+| time/                   |             |
+|    fps                  | 35          |
+|    iterations           | 3           |
+|    time_elapsed         | 175         |
+|    total_timesteps      | 657408      |
+| train/                  |             |
+|    approx_kl            | 0.029689774 |
+|    clip_fraction        | 0.24        |
+|    clip_range           | 0.2         |
+|    entropy_loss         | -11.8       |
+|    explained_variance   | -1.24       |
+|    learning_rate        | 0.0003      |
+|    loss                 | 52.7        |
+|    n_updates            | 3200        |
+|    policy_gradient_loss | -0.00557    |
+|    std                  | 0.906       |
+|    value_loss           | 1.98e+03    |
+-----------------------------------------
+SAVED
+Wrapping the env with a `Monitor` wrapper
+Wrapping the env in a DummyVecEnv.
+<stable_baselines3.ppo.ppo.PPO object at 0x0000025D5D4E4DF0> deque([<stable_baselines3.ppo.ppo.PPO object at 0x0000025D5D4E4DF0>], maxlen=10)
+---------------------------------
+| rollout/           |          |
+|    ep_len_mean     | 262      |
+|    ep_rew_mean     | -315     |
+| time/              |          |
+|    fps             | 21       |
+|    iterations      | 1        |
+|    time_elapsed    | 94       |
+|    total_timesteps | 659456   |
+---------------------------------
+-----------------------------------------
+| rollout/                |             |
+|    ep_len_mean          | 214         |
+|    ep_rew_mean          | -334        |
+| time/                   |             |
+|    fps                  | 21          |
+|    iterations           | 2           |
+|    time_elapsed         | 188         |
+|    total_timesteps      | 661504      |
+| train/                  |             |
+|    approx_kl            | 0.004528367 |
+|    clip_fraction        | 0.0245      |
+|    clip_range           | 0.2         |
+|    entropy_loss         | -11.9       |
+|    explained_variance   | -0.133      |
+|    learning_rate        | 0.0003      |
+|    loss                 | 673         |
+|    n_updates            | 3220        |
+|    policy_gradient_loss | -0.0058     |
+|    std                  | 0.907       |
+|    value_loss           | 1.92e+03    |
+-----------------------------------------
+------------------------------------------
+| rollout/                |              |
+|    ep_len_mean          | 214          |
+|    ep_rew_mean          | -334         |
+| time/                   |              |
+|    fps                  | 22           |
+|    iterations           | 3            |
+|    time_elapsed         | 276          |
+|    total_timesteps      | 663552       |
+| train/                  |              |
+|    approx_kl            | 0.0057985946 |
+|    clip_fraction        | 0.0201       |
+|    clip_range           | 0.2          |
+|    entropy_loss         | -11.9        |
+|    explained_variance   | 0.552        |
+|    learning_rate        | 0.0003       |
+|    loss                 | 778          |
+|    n_updates            | 3230         |
+|    policy_gradient_loss | -0.00727     |
+|    std                  | 0.907        |
+|    value_loss           | 1.93e+03     |
+------------------------------------------
+SAVED
+Wrapping the env with a `Monitor` wrapper
+Wrapping the env in a DummyVecEnv.
+<stable_baselines3.ppo.ppo.PPO object at 0x0000025D5D44EC10> deque([<stable_baselines3.ppo.ppo.PPO object at 0x0000025D5D4E4DF0>, <stable_baselines3.ppo.ppo.PPO object at 0x0000025D5D44EC10>], maxlen=10)
+---------------------------------
+| rollout/           |          |
+|    ep_len_mean     | 261      |
+|    ep_rew_mean     | -771     |
+| time/              |          |
+|    fps             | 20       |
+|    iterations      | 1        |
+|    time_elapsed    | 98       |
+|    total_timesteps | 665600   |
+---------------------------------
+----------------------------------------
+| rollout/                |            |
+|    ep_len_mean          | 269        |
+|    ep_rew_mean          | -802       |
+| time/                   |            |
+|    fps                  | 21         |
+|    iterations           | 2          |
+|    time_elapsed         | 190        |
+|    total_timesteps      | 667648     |
+| train/                  |            |
+|    approx_kl            | 0.03639672 |
+|    clip_fraction        | 0.297      |
+|    clip_range           | 0.2        |
+|    entropy_loss         | -11.8      |
+|    explained_variance   | 0.455      |
+|    learning_rate        | 0.0003     |
+|    loss                 | 1.9e+03    |
+|    n_updates            | 3250       |
+|    policy_gradient_loss | -0.00551   |
+|    std                  | 0.904      |
+|    value_loss           | 6.41e+03   |
+----------------------------------------
+------------------------------------------
+| rollout/                |              |
+|    ep_len_mean          | 269          |
+|    ep_rew_mean          | -802         |
+| time/                   |              |
+|    fps                  | 21           |
+|    iterations           | 3            |
+|    time_elapsed         | 283          |
+|    total_timesteps      | 669696       |
+| train/                  |              |
+|    approx_kl            | 0.0056774197 |
+|    clip_fraction        | 0.128        |
+|    clip_range           | 0.2          |
+|    entropy_loss         | -11.8        |
+|    explained_variance   | 0.334        |
+|    learning_rate        | 0.0003       |
+|    loss                 | 616          |
+|    n_updates            | 3260         |
+|    policy_gradient_loss | 0.0044       |
+|    std                  | 0.904        |
+|    value_loss           | 3.03e+03     |
+------------------------------------------
+SAVED
+Wrapping the env with a `Monitor` wrapper
+Wrapping the env in a DummyVecEnv.
+<stable_baselines3.ppo.ppo.PPO object at 0x0000025D5D4E4DF0> deque([<stable_baselines3.ppo.ppo.PPO object at 0x0000025D5D4E4DF0>, <stable_baselines3.ppo.ppo.PPO object at 0x0000025D5D44EC10>, <stable_baselines3.ppo.ppo.PPO object at 0x0000025D5D453400>], maxlen=10)
+---------------------------------
+| rollout/           |          |
+|    ep_len_mean     | 315      |
+|    ep_rew_mean     | -812     |
+| time/              |          |
+|    fps             | 21       |
+|    iterations      | 1        |
+|    time_elapsed    | 94       |
+|    total_timesteps | 671744   |
+---------------------------------
+-----------------------------------------
+| rollout/                |             |
+|    ep_len_mean          | 314         |
+|    ep_rew_mean          | -780        |
+| time/                   |             |
+|    fps                  | 21          |
+|    iterations           | 2           |
+|    time_elapsed         | 191         |
+|    total_timesteps      | 673792      |
+| train/                  |             |
+|    approx_kl            | 0.021413628 |
+|    clip_fraction        | 0.168       |
+|    clip_range           | 0.2         |
+|    entropy_loss         | -11.7       |
+|    explained_variance   | 0.434       |
+|    learning_rate        | 0.0003      |
+|    loss                 | 22.1        |
+|    n_updates            | 3280        |
+|    policy_gradient_loss | -0.0101     |
+|    std                  | 0.896       |
+|    value_loss           | 584         |
+-----------------------------------------
+-----------------------------------------
+| rollout/                |             |
+|    ep_len_mean          | 314         |
+|    ep_rew_mean          | -780        |
+| time/                   |             |
+|    fps                  | 22          |
+|    iterations           | 3           |
+|    time_elapsed         | 277         |
+|    total_timesteps      | 675840      |
+| train/                  |             |
+|    approx_kl            | 0.008355396 |
+|    clip_fraction        | 0.0839      |
+|    clip_range           | 0.2         |
+|    entropy_loss         | -11.7       |
+|    explained_variance   | 0.474       |
+|    learning_rate        | 0.0003      |
+|    loss                 | 392         |
+|    n_updates            | 3290        |
+|    policy_gradient_loss | -0.0107     |
+|    std                  | 0.894       |
+|    value_loss           | 880         |
+-----------------------------------------
+SAVED
+Wrapping the env with a `Monitor` wrapper
+Wrapping the env in a DummyVecEnv.
+<stable_baselines3.ppo.ppo.PPO object at 0x0000025D5D44EC10> deque([<stable_baselines3.ppo.ppo.PPO object at 0x0000025D5D4E4DF0>, <stable_baselines3.ppo.ppo.PPO object at 0x0000025D5D44EC10>, <stable_baselines3.ppo.ppo.PPO object at 0x0000025D5D453400>, <stable_baselines3.ppo.ppo.PPO object at 0x0000025D5D537340>], maxlen=10)
+---------------------------------
+| rollout/           |          |
+|    ep_len_mean     | 314      |
+|    ep_rew_mean     | -780     |
+| time/              |          |
+|    fps             | 23       |
+|    iterations      | 1        |
+|    time_elapsed    | 88       |
+|    total_timesteps | 677888   |
+---------------------------------
+-----------------------------------------
+| rollout/                |             |
+|    ep_len_mean          | 363         |
+|    ep_rew_mean          | -790        |
+| time/                   |             |
+|    fps                  | 21          |
+|    iterations           | 2           |
+|    time_elapsed         | 188         |
+|    total_timesteps      | 679936      |
+| train/                  |             |
+|    approx_kl            | 0.024669535 |
+|    clip_fraction        | 0.23        |
+|    clip_range           | 0.2         |
+|    entropy_loss         | -11.7       |
+|    explained_variance   | 0.559       |
+|    learning_rate        | 0.0003      |
+|    loss                 | 17.4        |
+|    n_updates            | 3310        |
+|    policy_gradient_loss | -0.0215     |
+|    std                  | 0.893       |
+|    value_loss           | 98.2        |
+-----------------------------------------
+-----------------------------------------
+| rollout/                |             |
+|    ep_len_mean          | 363         |
+|    ep_rew_mean          | -790        |
+| time/                   |             |
+|    fps                  | 21          |
+|    iterations           | 3           |
+|    time_elapsed         | 287         |
+|    total_timesteps      | 681984      |
+| train/                  |             |
+|    approx_kl            | 0.023076057 |
+|    clip_fraction        | 0.18        |
+|    clip_range           | 0.2         |
+|    entropy_loss         | -11.7       |
+|    explained_variance   | 0.409       |
+|    learning_rate        | 0.0003      |
+|    loss                 | 43          |
+|    n_updates            | 3320        |
+|    policy_gradient_loss | -0.0163     |
+|    std                  | 0.891       |
+|    value_loss           | 192         |
+-----------------------------------------
+SAVED
+Wrapping the env with a `Monitor` wrapper
+Wrapping the env in a DummyVecEnv.
+<stable_baselines3.ppo.ppo.PPO object at 0x0000025D5D453400> deque([<stable_baselines3.ppo.ppo.PPO object at 0x0000025D5D4E4DF0>, <stable_baselines3.ppo.ppo.PPO object at 0x0000025D5D44EC10>, <stable_baselines3.ppo.ppo.PPO object at 0x0000025D5D453400>, <stable_baselines3.ppo.ppo.PPO object at 0x0000025D5D537340>, <stable_baselines3.ppo.ppo.PPO object at 0x0000025D5D4CD580>], maxlen=10)
+---------------------------------
+| rollout/           |          |
+|    ep_len_mean     | 410      |
+|    ep_rew_mean     | -822     |
+| time/              |          |
+|    fps             | 20       |
+|    iterations      | 1        |
+|    time_elapsed    | 100      |
+|    total_timesteps | 684032   |
+---------------------------------
+-----------------------------------------
+| rollout/                |             |
+|    ep_len_mean          | 399         |
+|    ep_rew_mean          | -871        |
+| time/                   |             |
+|    fps                  | 21          |
+|    iterations           | 2           |
+|    time_elapsed         | 193         |
+|    total_timesteps      | 686080      |
+| train/                  |             |
+|    approx_kl            | 0.012750844 |
+|    clip_fraction        | 0.32        |
+|    clip_range           | 0.2         |
+|    entropy_loss         | -11.7       |
+|    explained_variance   | 0.711       |
+|    learning_rate        | 0.0003      |
+|    loss                 | 24.9        |
+|    n_updates            | 3340        |
+|    policy_gradient_loss | 0.00117     |
+|    std                  | 0.891       |
+|    value_loss           | 179         |
+-----------------------------------------
+------------------------------------------
+| rollout/                |              |
+|    ep_len_mean          | 396          |
+|    ep_rew_mean          | -842         |
+| time/                   |              |
+|    fps                  | 21           |
+|    iterations           | 3            |
+|    time_elapsed         | 289          |
+|    total_timesteps      | 688128       |
+| train/                  |              |
+|    approx_kl            | 0.0049548014 |
+|    clip_fraction        | 0.0192       |
+|    clip_range           | 0.2          |
+|    entropy_loss         | -11.7        |
+|    explained_variance   | -0.151       |
+|    learning_rate        | 0.0003       |
+|    loss                 | 250          |
+|    n_updates            | 3350         |
+|    policy_gradient_loss | -0.00648     |
+|    std                  | 0.891        |
+|    value_loss           | 848          |
+------------------------------------------
+SAVED
+Wrapping the env with a `Monitor` wrapper
+Wrapping the env in a DummyVecEnv.
+<stable_baselines3.ppo.ppo.PPO object at 0x0000025D5D5D0760> deque([<stable_baselines3.ppo.ppo.PPO object at 0x0000025D5D4E4DF0>, <stable_baselines3.ppo.ppo.PPO object at 0x0000025D5D44EC10>, <stable_baselines3.ppo.ppo.PPO object at 0x0000025D5D453400>, <stable_baselines3.ppo.ppo.PPO object at 0x0000025D5D537340>, <stable_baselines3.ppo.ppo.PPO object at 0x0000025D5D4CD580>, <stable_baselines3.ppo.ppo.PPO object at 0x0000025D5D5D0760>], maxlen=10)
+---------------------------------
+| rollout/           |          |
+|    ep_len_mean     | 400      |
+|    ep_rew_mean     | -893     |
+| time/              |          |
+|    fps             | 21       |
+|    iterations      | 1        |
+|    time_elapsed    | 94       |
+|    total_timesteps | 690176   |
+---------------------------------
+------------------------------------------
+| rollout/                |              |
+|    ep_len_mean          | 406          |
+|    ep_rew_mean          | -902         |
+| time/                   |              |
+|    fps                  | 21           |
+|    iterations           | 2            |
+|    time_elapsed         | 193          |
+|    total_timesteps      | 692224       |
+| train/                  |              |
+|    approx_kl            | 0.0070681158 |
+|    clip_fraction        | 0.0362       |
+|    clip_range           | 0.2          |
+|    entropy_loss         | -11.7        |
+|    explained_variance   | 0.0789       |
+|    learning_rate        | 0.0003       |
+|    loss                 | 103          |
+|    n_updates            | 3370         |
+|    policy_gradient_loss | -0.00707     |
+|    std                  | 0.891        |
+|    value_loss           | 380          |
+------------------------------------------
+-----------------------------------------
+| rollout/                |             |
+|    ep_len_mean          | 368         |
+|    ep_rew_mean          | -459        |
+| time/                   |             |
+|    fps                  | 21          |
+|    iterations           | 3           |
+|    time_elapsed         | 287         |
+|    total_timesteps      | 694272      |
+| train/                  |             |
+|    approx_kl            | 0.005925494 |
+|    clip_fraction        | 0.0447      |
+|    clip_range           | 0.2         |
+|    entropy_loss         | -11.7       |
+|    explained_variance   | 0.115       |
+|    learning_rate        | 0.0003      |
+|    loss                 | 449         |
+|    n_updates            | 3380        |
+|    policy_gradient_loss | -0.0103     |
+|    std                  | 0.891       |
+|    value_loss           | 502         |
+-----------------------------------------
+SAVED
+Wrapping the env with a `Monitor` wrapper
+Wrapping the env in a DummyVecEnv.
+<stable_baselines3.ppo.ppo.PPO object at 0x0000025D5D4E4F10> deque([<stable_baselines3.ppo.ppo.PPO object at 0x0000025D5D4E4DF0>, <stable_baselines3.ppo.ppo.PPO object at 0x0000025D5D44EC10>, <stable_baselines3.ppo.ppo.PPO object at 0x0000025D5D453400>, <stable_baselines3.ppo.ppo.PPO object at 0x0000025D5D537340>, <stable_baselines3.ppo.ppo.PPO object at 0x0000025D5D4CD580>, <stable_baselines3.ppo.ppo.PPO object at 0x0000025D5D5D0760>, <stable_baselines3.ppo.ppo.PPO object at 0x0000025D5D4E4F10>], maxlen=10)
+---------------------------------
+| rollout/           |          |
+|    ep_len_mean     | 383      |
+|    ep_rew_mean     | -461     |
+| time/              |          |
+|    fps             | 22       |
+|    iterations      | 1        |
+|    time_elapsed    | 91       |
+|    total_timesteps | 696320   |
+---------------------------------
+-----------------------------------------
+| rollout/                |             |
+|    ep_len_mean          | 380         |
+|    ep_rew_mean          | -463        |
+| time/                   |             |
+|    fps                  | 22          |
+|    iterations           | 2           |
+|    time_elapsed         | 184         |
+|    total_timesteps      | 698368      |
+| train/                  |             |
+|    approx_kl            | 0.009903008 |
+|    clip_fraction        | 0.128       |
+|    clip_range           | 0.2         |
+|    entropy_loss         | -11.7       |
+|    explained_variance   | 0.0644      |
+|    learning_rate        | 0.0003      |
+|    loss                 | 88.1        |
+|    n_updates            | 3400        |
+|    policy_gradient_loss | -0.0122     |
+|    std                  | 0.891       |
+|    value_loss           | 256         |
+-----------------------------------------
+-----------------------------------------
+| rollout/                |             |
+|    ep_len_mean          | 380         |
+|    ep_rew_mean          | -463        |
+| time/                   |             |
+|    fps                  | 22          |
+|    iterations           | 3           |
+|    time_elapsed         | 269         |
+|    total_timesteps      | 700416      |
+| train/                  |             |
+|    approx_kl            | 0.016252149 |
+|    clip_fraction        | 0.212       |
+|    clip_range           | 0.2         |
+|    entropy_loss         | -11.7       |
+|    explained_variance   | -0.316      |
+|    learning_rate        | 0.0003      |
+|    loss                 | 22.5        |
+|    n_updates            | 3410        |
+|    policy_gradient_loss | -0.014      |
+|    std                  | 0.892       |
+|    value_loss           | 116         |
+-----------------------------------------
+SAVED
+Wrapping the env with a `Monitor` wrapper
+Wrapping the env in a DummyVecEnv.
+<stable_baselines3.ppo.ppo.PPO object at 0x0000025D5D537340> deque([<stable_baselines3.ppo.ppo.PPO object at 0x0000025D5D4E4DF0>, <stable_baselines3.ppo.ppo.PPO object at 0x0000025D5D44EC10>, <stable_baselines3.ppo.ppo.PPO object at 0x0000025D5D453400>, <stable_baselines3.ppo.ppo.PPO object at 0x0000025D5D537340>, <stable_baselines3.ppo.ppo.PPO object at 0x0000025D5D4CD580>, <stable_baselines3.ppo.ppo.PPO object at 0x0000025D5D5D0760>, <stable_baselines3.ppo.ppo.PPO object at 0x0000025D5D4E4F10>, <stable_baselines3.ppo.ppo.PPO object at 0x0000025D5D617E20>], maxlen=10)
+---------------------------------
+| rollout/           |          |
+|    ep_len_mean     | 432      |
+|    ep_rew_mean     | -466     |
+| time/              |          |
+|    fps             | 21       |
+|    iterations      | 1        |
+|    time_elapsed    | 95       |
+|    total_timesteps | 702464   |
+---------------------------------
+----------------------------------------
+| rollout/                |            |
+|    ep_len_mean          | 439        |
+|    ep_rew_mean          | -470       |
+| time/                   |            |
+|    fps                  | 21         |
+|    iterations           | 2          |
+|    time_elapsed         | 187        |
+|    total_timesteps      | 704512     |
+| train/                  |            |
+|    approx_kl            | 0.00994535 |
+|    clip_fraction        | 0.137      |
+|    clip_range           | 0.2        |
+|    entropy_loss         | -11.7      |
+|    explained_variance   | 0.646      |
+|    learning_rate        | 0.0003     |
+|    loss                 | 68.8       |
+|    n_updates            | 3430       |
+|    policy_gradient_loss | -0.0119    |
+|    std                  | 0.89       |
+|    value_loss           | 190        |
+----------------------------------------
+-----------------------------------------
+| rollout/                |             |
+|    ep_len_mean          | 390         |
+|    ep_rew_mean          | -24.5       |
+| time/                   |             |
+|    fps                  | 21          |
+|    iterations           | 3           |
+|    time_elapsed         | 285         |
+|    total_timesteps      | 706560      |
+| train/                  |             |
+|    approx_kl            | 0.012414183 |
+|    clip_fraction        | 0.0855      |
+|    clip_range           | 0.2         |
+|    entropy_loss         | -11.7       |
+|    explained_variance   | 0.14        |
+|    learning_rate        | 0.0003      |
+|    loss                 | 102         |
+|    n_updates            | 3440        |
+|    policy_gradient_loss | -0.0116     |
+|    std                  | 0.891       |
+|    value_loss           | 351         |
+-----------------------------------------
+SAVED
+Wrapping the env with a `Monitor` wrapper
+Wrapping the env in a DummyVecEnv.
+<stable_baselines3.ppo.ppo.PPO object at 0x0000025D5D5C13A0> deque([<stable_baselines3.ppo.ppo.PPO object at 0x0000025D5D4E4DF0>, <stable_baselines3.ppo.ppo.PPO object at 0x0000025D5D44EC10>, <stable_baselines3.ppo.ppo.PPO object at 0x0000025D5D453400>, <stable_baselines3.ppo.ppo.PPO object at 0x0000025D5D537340>, <stable_baselines3.ppo.ppo.PPO object at 0x0000025D5D4CD580>, <stable_baselines3.ppo.ppo.PPO object at 0x0000025D5D5D0760>, <stable_baselines3.ppo.ppo.PPO object at 0x0000025D5D4E4F10>, <stable_baselines3.ppo.ppo.PPO object at 0x0000025D5D617E20>, <stable_baselines3.ppo.ppo.PPO object at 0x0000025D5D5C13A0>], maxlen=10)
+---------------------------------
+| rollout/           |          |
+|    ep_len_mean     | 390      |
+|    ep_rew_mean     | -24.5    |
+| time/              |          |
+|    fps             | 20       |
+|    iterations      | 1        |
+|    time_elapsed    | 98       |
+|    total_timesteps | 708608   |
+---------------------------------
+-----------------------------------------
+| rollout/                |             |
+|    ep_len_mean          | 442         |
+|    ep_rew_mean          | -476        |
+| time/                   |             |
+|    fps                  | 21          |
+|    iterations           | 2           |
+|    time_elapsed         | 190         |
+|    total_timesteps      | 710656      |
+| train/                  |             |
+|    approx_kl            | 0.027790036 |
+|    clip_fraction        | 0.18        |
+|    clip_range           | 0.2         |
+|    entropy_loss         | -11.7       |
+|    explained_variance   | -2.89       |
+|    learning_rate        | 0.0003      |
+|    loss                 | 9.27        |
+|    n_updates            | 3460        |
+|    policy_gradient_loss | -0.00796    |
+|    std                  | 0.891       |
+|    value_loss           | 3.23e+03    |
+-----------------------------------------
+------------------------------------------
+| rollout/                |              |
+|    ep_len_mean          | 400          |
+|    ep_rew_mean          | -471         |
+| time/                   |              |
+|    fps                  | 21           |
+|    iterations           | 3            |
+|    time_elapsed         | 280          |
+|    total_timesteps      | 712704       |
+| train/                  |              |
+|    approx_kl            | 0.0059059253 |
+|    clip_fraction        | 0.0664       |
+|    clip_range           | 0.2          |
+|    entropy_loss         | -11.7        |
+|    explained_variance   | 0.728        |
+|    learning_rate        | 0.0003       |
+|    loss                 | 2.09e+03     |
+|    n_updates            | 3470         |
+|    policy_gradient_loss | -0.00818     |
+|    std                  | 0.891        |
+|    value_loss           | 5.61e+03     |
+------------------------------------------
+SAVED
+Wrapping the env with a `Monitor` wrapper
+Wrapping the env in a DummyVecEnv.
+<stable_baselines3.ppo.ppo.PPO object at 0x0000025D5D537190> deque([<stable_baselines3.ppo.ppo.PPO object at 0x0000025D5D4E4DF0>, <stable_baselines3.ppo.ppo.PPO object at 0x0000025D5D44EC10>, <stable_baselines3.ppo.ppo.PPO object at 0x0000025D5D453400>, <stable_baselines3.ppo.ppo.PPO object at 0x0000025D5D537340>, <stable_baselines3.ppo.ppo.PPO object at 0x0000025D5D4CD580>, <stable_baselines3.ppo.ppo.PPO object at 0x0000025D5D5D0760>, <stable_baselines3.ppo.ppo.PPO object at 0x0000025D5D4E4F10>, <stable_baselines3.ppo.ppo.PPO object at 0x0000025D5D617E20>, <stable_baselines3.ppo.ppo.PPO object at 0x0000025D5D5C13A0>, <stable_baselines3.ppo.ppo.PPO object at 0x0000025D5D537190>], maxlen=10)
+---------------------------------
+| rollout/           |          |
+|    ep_len_mean     | 403      |
+|    ep_rew_mean     | -471     |
+| time/              |          |
+|    fps             | 21       |
+|    iterations      | 1        |
+|    time_elapsed    | 93       |
+|    total_timesteps | 714752   |
+---------------------------------
+-----------------------------------------
+| rollout/                |             |
+|    ep_len_mean          | 403         |
+|    ep_rew_mean          | -471        |
+| time/                   |             |
+|    fps                  | 22          |
+|    iterations           | 2           |
+|    time_elapsed         | 184         |
+|    total_timesteps      | 716800      |
+| train/                  |             |
+|    approx_kl            | 0.008003809 |
+|    clip_fraction        | 0.0434      |
+|    clip_range           | 0.2         |
+|    entropy_loss         | -11.7       |
+|    explained_variance   | 0.907       |
+|    learning_rate        | 0.0003      |
+|    loss                 | 80          |
+|    n_updates            | 3490        |
+|    policy_gradient_loss | -0.0084     |
+|    std                  | 0.89        |
+|    value_loss           | 313         |
+-----------------------------------------
+-----------------------------------------
+| rollout/                |             |
+|    ep_len_mean          | 457         |
+|    ep_rew_mean          | -466        |
+| time/                   |             |
+|    fps                  | 21          |
+|    iterations           | 3           |
+|    time_elapsed         | 279         |
+|    total_timesteps      | 718848      |
+| train/                  |             |
+|    approx_kl            | 0.012035395 |
+|    clip_fraction        | 0.0663      |
+|    clip_range           | 0.2         |
+|    entropy_loss         | -11.7       |
+|    explained_variance   | -3.08       |
+|    learning_rate        | 0.0003      |
+|    loss                 | 32.6        |
+|    n_updates            | 3500        |
+|    policy_gradient_loss | -0.00979    |
+|    std                  | 0.889       |
+|    value_loss           | 357         |
+-----------------------------------------
+SAVED
+Wrapping the env with a `Monitor` wrapper
+Wrapping the env in a DummyVecEnv.
+<stable_baselines3.ppo.ppo.PPO object at 0x0000025D5D537C70> deque([<stable_baselines3.ppo.ppo.PPO object at 0x0000025D5D44EC10>, <stable_baselines3.ppo.ppo.PPO object at 0x0000025D5D453400>, <stable_baselines3.ppo.ppo.PPO object at 0x0000025D5D537340>, <stable_baselines3.ppo.ppo.PPO object at 0x0000025D5D4CD580>, <stable_baselines3.ppo.ppo.PPO object at 0x0000025D5D5D0760>, <stable_baselines3.ppo.ppo.PPO object at 0x0000025D5D4E4F10>, <stable_baselines3.ppo.ppo.PPO object at 0x0000025D5D617E20>, <stable_baselines3.ppo.ppo.PPO object at 0x0000025D5D5C13A0>, <stable_baselines3.ppo.ppo.PPO object at 0x0000025D5D537190>, <stable_baselines3.ppo.ppo.PPO object at 0x0000025D5D537C70>], maxlen=10)
+---------------------------------
+| rollout/           |          |
+|    ep_len_mean     | 363      |
+|    ep_rew_mean     | -468     |
+| time/              |          |
+|    fps             | 23       |
+|    iterations      | 1        |
+|    time_elapsed    | 88       |
+|    total_timesteps | 720896   |
+---------------------------------
+-----------------------------------------
+| rollout/                |             |
+|    ep_len_mean          | 371         |
+|    ep_rew_mean          | -468        |
+| time/                   |             |
+|    fps                  | 22          |
+|    iterations           | 2           |
+|    time_elapsed         | 182         |
+|    total_timesteps      | 722944      |
+| train/                  |             |
+|    approx_kl            | 0.011046347 |
+|    clip_fraction        | 0.127       |
+|    clip_range           | 0.2         |
+|    entropy_loss         | -11.6       |
+|    explained_variance   | 0.569       |
+|    learning_rate        | 0.0003      |
+|    loss                 | 179         |
+|    n_updates            | 3520        |
+|    policy_gradient_loss | -0.00773    |
+|    std                  | 0.886       |
+|    value_loss           | 199         |
+-----------------------------------------
+-----------------------------------------
+| rollout/                |             |
+|    ep_len_mean          | 378         |
+|    ep_rew_mean          | -472        |
+| time/                   |             |
+|    fps                  | 22          |
+|    iterations           | 3           |
+|    time_elapsed         | 274         |
+|    total_timesteps      | 724992      |
+| train/                  |             |
+|    approx_kl            | 0.014075149 |
+|    clip_fraction        | 0.147       |
+|    clip_range           | 0.2         |
+|    entropy_loss         | -11.6       |
+|    explained_variance   | 0.509       |
+|    learning_rate        | 0.0003      |
+|    loss                 | 142         |
+|    n_updates            | 3530        |
+|    policy_gradient_loss | -0.00981    |
+|    std                  | 0.884       |
+|    value_loss           | 484         |
+-----------------------------------------
+SAVED
+Wrapping the env with a `Monitor` wrapper
+Wrapping the env in a DummyVecEnv.
+<stable_baselines3.ppo.ppo.PPO object at 0x0000025D5D605AF0> deque([<stable_baselines3.ppo.ppo.PPO object at 0x0000025D5D453400>, <stable_baselines3.ppo.ppo.PPO object at 0x0000025D5D537340>, <stable_baselines3.ppo.ppo.PPO object at 0x0000025D5D4CD580>, <stable_baselines3.ppo.ppo.PPO object at 0x0000025D5D5D0760>, <stable_baselines3.ppo.ppo.PPO object at 0x0000025D5D4E4F10>, <stable_baselines3.ppo.ppo.PPO object at 0x0000025D5D617E20>, <stable_baselines3.ppo.ppo.PPO object at 0x0000025D5D5C13A0>, <stable_baselines3.ppo.ppo.PPO object at 0x0000025D5D537190>, <stable_baselines3.ppo.ppo.PPO object at 0x0000025D5D537C70>, <stable_baselines3.ppo.ppo.PPO object at 0x0000025D5D605AF0>], maxlen=10)
+---------------------------------
+| rollout/           |          |
+|    ep_len_mean     | 382      |
+|    ep_rew_mean     | -470     |
+| time/              |          |
+|    fps             | 21       |
+|    iterations      | 1        |
+|    time_elapsed    | 94       |
+|    total_timesteps | 727040   |
+---------------------------------
+-----------------------------------------
+| rollout/                |             |
+|    ep_len_mean          | 383         |
+|    ep_rew_mean          | -466        |
+| time/                   |             |
+|    fps                  | 22          |
+|    iterations           | 2           |
+|    time_elapsed         | 184         |
+|    total_timesteps      | 729088      |
+| train/                  |             |
+|    approx_kl            | 0.015488613 |
+|    clip_fraction        | 0.176       |
+|    clip_range           | 0.2         |
+|    entropy_loss         | -11.6       |
+|    explained_variance   | -0.0246     |
+|    learning_rate        | 0.0003      |
+|    loss                 | 41.3        |
+|    n_updates            | 3550        |
+|    policy_gradient_loss | -0.014      |
+|    std                  | 0.881       |
+|    value_loss           | 455         |
+-----------------------------------------
+----------------------------------------
+| rollout/                |            |
+|    ep_len_mean          | 388        |
+|    ep_rew_mean          | -452       |
+| time/                   |            |
+|    fps                  | 22         |
+|    iterations           | 3          |
+|    time_elapsed         | 272        |
+|    total_timesteps      | 731136     |
+| train/                  |            |
+|    approx_kl            | 0.01845431 |
+|    clip_fraction        | 0.17       |
+|    clip_range           | 0.2        |
+|    entropy_loss         | -11.6      |
+|    explained_variance   | 0.341      |
+|    learning_rate        | 0.0003     |
+|    loss                 | 74.4       |
+|    n_updates            | 3560       |
+|    policy_gradient_loss | -0.0158    |
+|    std                  | 0.877      |
+|    value_loss           | 249        |
+----------------------------------------
+SAVED
+Wrapping the env with a `Monitor` wrapper
+Wrapping the env in a DummyVecEnv.
+<stable_baselines3.ppo.ppo.PPO object at 0x0000025D5D617EB0> deque([<stable_baselines3.ppo.ppo.PPO object at 0x0000025D5D537340>, <stable_baselines3.ppo.ppo.PPO object at 0x0000025D5D4CD580>, <stable_baselines3.ppo.ppo.PPO object at 0x0000025D5D5D0760>, <stable_baselines3.ppo.ppo.PPO object at 0x0000025D5D4E4F10>, <stable_baselines3.ppo.ppo.PPO object at 0x0000025D5D617E20>, <stable_baselines3.ppo.ppo.PPO object at 0x0000025D5D5C13A0>, <stable_baselines3.ppo.ppo.PPO object at 0x0000025D5D537190>, <stable_baselines3.ppo.ppo.PPO object at 0x0000025D5D537C70>, <stable_baselines3.ppo.ppo.PPO object at 0x0000025D5D605AF0>, <stable_baselines3.ppo.ppo.PPO object at 0x0000025D5D617EB0>], maxlen=10)
+---------------------------------
+| rollout/           |          |
+|    ep_len_mean     | 385      |
+|    ep_rew_mean     | -454     |
+| time/              |          |
+|    fps             | 22       |
+|    iterations      | 1        |
+|    time_elapsed    | 89       |
+|    total_timesteps | 733184   |
+---------------------------------
+Traceback (most recent call last):
+  File "c:\Users\zacle\Documents\AirsoftAI\AirsoftAI\train.py", line 46, in <module>
+    model.learn(total_timesteps=TIMESTEPS, reset_num_timesteps=False, callback=
+  File "C:\Users\zacle\AppData\Local\Programs\Python\Python39\lib\site-packages\stable_baselines3\ppo\ppo.py", line 299, in learn
+    return super(PPO, self).learn(
+  File "C:\Users\zacle\AppData\Local\Programs\Python\Python39\lib\site-packages\stable_baselines3\common\on_policy_algorithm.py", line 250, in learn
+    continue_training = self.collect_rollouts(self.env, callback, self.rollout_buffer, n_rollout_steps=self.n_steps)
+  File "C:\Users\zacle\AppData\Local\Programs\Python\Python39\lib\site-packages\stable_baselines3\common\on_policy_algorithm.py", line 178, in collect_rollouts
+    new_obs, rewards, dones, infos = env.step(clipped_actions)
+  File "C:\Users\zacle\AppData\Local\Programs\Python\Python39\lib\site-packages\stable_baselines3\common\vec_env\base_vec_env.py", line 162, in step
+    return self.step_wait()
+  File "C:\Users\zacle\AppData\Local\Programs\Python\Python39\lib\site-packages\stable_baselines3\common\vec_env\dummy_vec_env.py", line 50, in step_wait
+    self._save_obs(env_idx, obs)
+  File "C:\Users\zacle\AppData\Local\Programs\Python\Python39\lib\site-packages\stable_baselines3\common\vec_env\dummy_vec_env.py", line 92, in _save_obs
+    self.buf_obs[key][env_idx] = obs
+KeyboardInterrupt

@@ -1,0 +1,264 @@
+2022-04-13 07:22:18,591 INFO    MainThread:16700 [wandb_setup.py:_flush():75] Loading settings from C:\Users\zacle\.config\wandb\settings
+2022-04-13 07:22:18,591 INFO    MainThread:16700 [wandb_setup.py:_flush():75] Loading settings from C:\Users\zacle\Documents\AirsoftAI\AirsoftAI\wandb\settings
+2022-04-13 07:22:18,591 INFO    MainThread:16700 [wandb_setup.py:_flush():75] Loading settings from environment variables: {}
+2022-04-13 07:22:18,591 INFO    MainThread:16700 [wandb_setup.py:_flush():75] Inferring run settings from compute environment: {'program_relpath': 'AirsoftAI\\train.py', 'program': 'c:\\Users\\zacle\\Documents\\AirsoftAI\\AirsoftAI\\train.py'}
+2022-04-13 07:22:18,591 INFO    MainThread:16700 [wandb_init.py:_log_setup():405] Logging user logs to C:\Users\zacle\Documents\AirsoftAI\AirsoftAI\wandb\run-20220413_072218-6u3o99ri\logs\debug.log
+2022-04-13 07:22:18,592 INFO    MainThread:16700 [wandb_init.py:_log_setup():406] Logging internal logs to C:\Users\zacle\Documents\AirsoftAI\AirsoftAI\wandb\run-20220413_072218-6u3o99ri\logs\debug-internal.log
+2022-04-13 07:22:18,592 INFO    MainThread:16700 [wandb_init.py:init():439] calling init triggers
+2022-04-13 07:22:18,592 INFO    MainThread:16700 [wandb_init.py:init():442] wandb.init called with sweep_config: {}
+config: {'policy_type': 'MlpPolicy', 'total_timesteps': 5000, 'env_name': 'CartPole-v1'}
+2022-04-13 07:22:18,592 INFO    MainThread:16700 [wandb_init.py:init():492] starting backend
+2022-04-13 07:22:18,592 INFO    MainThread:16700 [backend.py:_multiprocessing_setup():99] multiprocessing start_methods=spawn, using: spawn
+2022-04-13 07:22:18,595 INFO    MainThread:16700 [backend.py:ensure_launched():219] starting backend process...
+2022-04-13 07:22:18,641 INFO    MainThread:16700 [backend.py:ensure_launched():224] started backend process with pid: 9720
+2022-04-13 07:22:18,642 INFO    MainThread:16700 [wandb_init.py:init():501] backend started and connected
+2022-04-13 07:22:18,644 INFO    MainThread:16700 [wandb_init.py:init():565] updated telemetry
+2022-04-13 07:22:18,677 INFO    MainThread:16700 [wandb_init.py:init():596] communicating run to backend with 30 second timeout
+2022-04-13 07:22:19,507 INFO    MainThread:16700 [wandb_run.py:_on_init():1759] communicating current version
+2022-04-13 07:22:19,604 INFO    MainThread:16700 [wandb_run.py:_on_init():1763] got version response upgrade_message: "wandb version 0.12.14 is available!  To upgrade, please run:\n $ pip install wandb --upgrade"
+
+2022-04-13 07:22:19,604 INFO    MainThread:16700 [wandb_init.py:init():625] starting run threads in backend
+2022-04-13 07:22:21,397 INFO    MainThread:16700 [wandb_run.py:_console_start():1733] atexit reg
+2022-04-13 07:22:21,398 INFO    MainThread:16700 [wandb_run.py:_redirect():1606] redirect: SettingsConsole.WRAP
+2022-04-13 07:22:21,398 INFO    MainThread:16700 [wandb_run.py:_redirect():1643] Wrapping output streams.
+2022-04-13 07:22:21,400 INFO    MainThread:16700 [wandb_run.py:_redirect():1667] Redirects installed.
+2022-04-13 07:22:21,400 INFO    MainThread:16700 [wandb_init.py:init():664] run started, returning control to user process
+2022-04-13 07:22:21,489 INFO    MainThread:16700 [wandb_run.py:_config_callback():992] config_cb None None {'algo': 'PPO', 'policy_class': "<class 'stable_baselines3.common.policies.ActorCriticPolicy'>", 'device': 'cpu', 'env': '<stable_baselines3.common.vec_env.dummy_vec_env.DummyVecEnv object at 0x000001A14102DC40>', '_vec_normalize_env': 'None', 'verbose': 2, 'policy_kwargs': '{}', 'observation_space': 'Box([-inf -inf -inf -inf -inf -inf -inf -inf -inf -inf -inf -inf -inf -inf\n -inf -inf -inf -inf -inf -inf -inf -inf -inf -inf -inf -inf -inf -inf\n -inf -inf -inf -inf -inf -inf -inf -inf -inf -inf -inf -inf -inf -inf\n -inf -inf -inf -inf -inf -inf -inf -inf -inf -inf -inf -inf -inf -inf\n -inf -inf -inf -inf -inf -inf -inf -inf -inf -inf -inf -inf -inf -inf\n -inf -inf -inf -inf -inf -inf -inf -inf -inf -inf -inf -inf -inf -inf\n -inf -inf -inf -inf -inf -inf -inf -inf -inf -inf -inf -inf -inf -inf\n -inf], [inf inf inf inf inf inf inf inf inf inf inf inf inf inf inf inf inf inf\n inf inf inf inf inf inf inf inf inf inf inf inf inf inf inf inf inf inf\n inf inf inf inf inf inf inf inf inf inf inf inf inf inf inf inf inf inf\n inf inf inf inf inf inf inf inf inf inf inf inf inf inf inf inf inf inf\n inf inf inf inf inf inf inf inf inf inf inf inf inf inf inf inf inf inf\n inf inf inf inf inf inf inf inf inf], (99,), float32)', 'action_space': 'Box([-inf -inf -inf -inf -inf -inf -inf -inf -inf], [inf inf inf inf inf inf inf inf inf], (9,), float32)', 'n_envs': 1, 'num_timesteps': 172032, '_total_timesteps': 177032, '_num_timesteps_at_start': 172032, 'eval_env': 'None', 'seed': 'None', 'action_noise': 'None', 'start_time': 1649859741.448749, 'policy': 'ActorCriticPolicy(\n  (features_extractor): FlattenExtractor(\n    (flatten): Flatten(start_dim=1, end_dim=-1)\n  )\n  (mlp_extractor): MlpExtractor(\n    (shared_net): Sequential()\n    (policy_net): Sequential(\n      (0): Linear(in_features=99, out_features=64, bias=True)\n      (1): Tanh()\n      (2): Linear(in_features=64, out_features=64, bias=True)\n      (3): Tanh()\n    )\n    (value_net): Sequential(\n      (0): Linear(in_features=99, out_features=64, bias=True)\n      (1): Tanh()\n      (2): Linear(in_features=64, out_features=64, bias=True)\n      (3): Tanh()\n    )\n  )\n  (action_net): Linear(in_features=64, out_features=9, bias=True)\n  (value_net): Linear(in_features=64, out_features=1, bias=True)\n)', 'learning_rate': 0.0003, 'tensorboard_log': 'None', 'lr_schedule': '<function constant_fn.<locals>.func at 0x000001A141044310>', '_last_obs': '[[   1.         1.         1.         1.         1.         1.\n     1.         1.         1.         1.         1.         1.\n     1.         1.         1.         1.         1.         1.\n     1.         1.         1.         1.         1.         1.\n     1.         1.         1.         1.         1.         1.\n     1.         1.         1.         1.         1.         1.\n     1.         1.         1.         1.         1.         1.\n     1.         1.         1.         1.         1.         1.\n     1.         1.         1.         1.         1.         1.\n     1.         1.         1.         1.         1.         1.\n     1.         1.         1.         1.         1.         1.\n     1.         1.         1.         1.         1.         1.\n     1.         1.         1.         1.         1.         1.\n     1.         1.         1.         1.         1.         1.\n     1.         1.         1.         1.         1.         1.\n     9.        11.       270.         0.         0.         0.\n    30.        90.      -129.28941]]', '_last_episode_starts': '[ True]', '_last_original_obs': 'None', '_episode_num': 0, 'use_sde': 'False', 'sde_sample_freq': -1, '_current_progress_remaining': -0.006694443144047657, 'ep_info_buffer': "deque([{'r': -1001, 'l': 15, 't': 9953.974674}, {'r': 1001.1, 'l': 12, 't': 9954.699733}, {'r': 1001.1, 'l': 18, 't': 9955.744937}, {'r': 1001.1, 'l': 11, 't': 9956.220664}, {'r': -1001, 'l': 7, 't': 9956.658491}, {'r': -1001, 'l': 25, 't': 9958.331015}, {'r': 1001.1, 'l': 5, 't': 9958.525498}, {'r': -1001, 'l': 5, 't': 9958.881545}, {'r': 1001.1, 'l': 5, 't': 9959.180743}, {'r': -1001, 'l': 1, 't': 9959.214653}, {'r': 1001.1, 'l': 2, 't': 9959.368243}, {'r': 1001.1, 'l': 5, 't': 9959.6455}, {'r': -1001, 'l': 3, 't': 9959.826017}, {'r': 1001.1, 'l': 4, 't': 9960.128206}, {'r': 1001.1, 'l': 21, 't': 9961.811702}, {'r': 1001.1, 'l': 22, 't': 9963.566009}, {'r': -1001, 'l': 10, 't': 9964.13748}, {'r': -1001, 'l': 15, 't': 9965.0261}, {'r': -1001, 'l': 22, 't': 9966.314652}, {'r': 1001.1, 'l': 32, 't': 9968.646416}, {'r': 1001.1, 'l': 4, 't': 9968.89076}, {'r': -1001, 'l': 10, 't': 9969.420344}, {'r': 1001.1, 'l': 15, 't': 9970.517409}, {'r': 1001.1, 'l': 1, 't': 9970.594204}, {'r': 1001.1, 'l': 4, 't': 9970.839547}, {'r': -1001, 'l': 9, 't': 9971.6045}, {'r': 1001.1, 'l': 11, 't': 9972.331554}, {'r': -1001, 'l': 9, 't': 9973.070583}, {'r': 1001.1, 'l': 10, 't': 9973.66399}, {'r': 1001.1, 'l': 1, 't': 9973.744771}, {'r': 1001.1, 'l': 14, 't': 9974.76903}, {'r': 1001.1, 'l': 16, 't': 9975.809248}, {'r': 1001.1, 'l': 13, 't': 9976.544282}, {'r': -1001, 'l': 24, 't': 9977.97545}, {'r': -1001, 'l': 12, 't': 9978.83515}, {'r': 1001.1, 'l': 15, 't': 9979.608083}, {'r': 1001.1, 'l': 9, 't': 9980.109746}, {'r': 1001.1, 'l': 12, 't': 9981.096103}, {'r': 1001.1, 'l': 17, 't': 9982.304867}, {'r': 1001.1, 'l': 20, 't': 9983.500666}, {'r': -1001, 'l': 23, 't': 9984.597731}, {'r': -1001, 'l': 3, 't': 9984.713421}, {'r': -1001, 'l': 19, 't': 9986.277237}, {'r': 1001.1, 'l': 5, 't': 9986.606355}, {'r': -1001, 'l': 24, 't': 9988.1612}, {'r': -1001, 'l': 7, 't': 9988.635929}, {'r': 1001.1, 'l': 3, 't': 9988.77356}, {'r': -1001, 'l': 13, 't': 9989.488647}, {'r': 1001.1, 'l': 35, 't': 9991.53118}, {'r': -1001, 'l': 5, 't': 9991.840353}, {'r': -1001, 'l': 14, 't': 9992.786819}, {'r': -1001, 'l': 7, 't': 9993.379232}, {'r': -1001, 'l': 31, 't': 9995.152492}, {'r': 1001.1, 'l': 16, 't': 9996.01119}, {'r': -1001, 'l': 27, 't': 9997.722611}, {'r': -1001, 'l': 13, 't': 9998.553388}, {'r': -1001, 'l': 2, 't': 9998.71296}, {'r': -1001, 'l': 10, 't': 9999.44202}, {'r': 1001.1, 'l': 12, 't': 10000.10224}, {'r': 1001.1, 'l': 2, 't': 10000.239876}, {'r': 1001.1, 'l': 13, 't': 10000.887145}, {'r': -1001, 'l': 29, 't': 10002.840916}, {'r': 1001.1, 'l': 18, 't': 10004.204266}, {'r': -1001, 'l': 22, 't': 10005.938627}, {'r': 1001, 'l': 21, 't': 10007.302975}, {'r': 1001.1, 'l': 79, 't': 10012.175937}, {'r': 1001.1, 'l': 15, 't': 10013.189224}, {'r': -1001, 'l': 13, 't': 10014.041944}, {'r': -1001, 'l': 5, 't': 10014.383032}, {'r': 1001.1, 'l': 10, 't': 10015.042267}, {'r': -1001, 'l': 24, 't': 10016.969117}, {'r': 1001.1, 'l': 12, 't': 10017.893637}, {'r': 1001.1, 'l': 2, 't': 10017.988383}, {'r': 1001.1, 'l': 12, 't': 10018.834121}, {'r': -1001, 'l': 3, 't': 10018.951806}, {'r': -1001, 'l': 1, 't': 10018.981727}, {'r': 1001.1, 'l': 9, 't': 10019.711773}, {'r': 1001.1, 'l': 3, 't': 10019.873341}, {'r': -1001, 'l': 8, 't': 10020.251328}, {'r': 1001.1, 'l': 19, 't': 10021.563823}, {'r': 1001.1, 'l': 6, 't': 10021.994663}, {'r': -1001, 'l': 26, 't': 10023.817788}, {'r': 1001.1, 'l': 41, 't': 10026.404865}, {'r': -1001, 'l': 4, 't': 10026.6532}, {'r': -1001, 'l': 7, 't': 10026.990297}, {'r': 1001.1, 'l': 26, 't': 10028.551121}, {'r': -1001, 'l': 15, 't': 10029.54546}, {'r': -1001, 'l': 5, 't': 10029.853634}, {'r': 1001.1, 'l': 7, 't': 10030.254565}, {'r': -1001, 'l': 2, 't': 10030.401175}, {'r': 1001.1, 'l': 15, 't': 10031.423436}, {'r': 1001.1, 'l': 20, 't': 10032.453678}, {'r': 1001.1, 'l': 15, 't': 10033.55872}, {'r': -1001, 'l': 11, 't': 10034.432383}, {'r': -1001, 'l': 24, 't': 10035.958301}, {'r': -1001, 'l': 16, 't': 10037.082291}, {'r': -1001, 'l': 4, 't': 10037.354564}, {'r': 1001.1, 'l': 10, 't': 10038.054695}, {'r': 1001.1, 'l': 10, 't': 10038.820639}, {'r': -1001, 'l': 24, 't': 10040.474217}], maxlen=100)", 'ep_success_buffer': 'deque([], maxlen=100)', '_n_updates': 840, '_logger': '<stable_baselines3.common.logger.Logger object at 0x000001A14102D190>', '_custom_logger': 'False', 'n_steps': 2048, 'gamma': 0.99, 'gae_lambda': 0.95, 'ent_coef': 0.0, 'vf_coef': 0.5, 'max_grad_norm': 0.5, 'rollout_buffer': '<stable_baselines3.common.buffers.RolloutBuffer object at 0x000001A14102DBB0>', 'batch_size': 64, 'n_epochs': 10, 'clip_range': '<function constant_fn.<locals>.func at 0x000001A141044280>', 'clip_range_vf': 'None', 'target_kl': 'None'}
+2022-04-13 07:25:03,389 INFO    MainThread:16700 [wandb_run.py:_config_callback():992] config_cb None None {}
+2022-04-13 07:30:14,953 INFO    MainThread:16700 [wandb_run.py:_config_callback():992] config_cb None None {}
+2022-04-13 07:35:33,872 INFO    MainThread:16700 [wandb_run.py:_config_callback():992] config_cb None None {}
+2022-04-13 07:40:48,238 INFO    MainThread:16700 [wandb_run.py:_config_callback():992] config_cb None None {}
+2022-04-13 07:45:33,571 INFO    MainThread:16700 [wandb_run.py:_config_callback():992] config_cb None None {}
+2022-04-13 07:50:36,854 INFO    MainThread:16700 [wandb_run.py:_config_callback():992] config_cb None None {}
+2022-04-13 07:55:47,551 INFO    MainThread:16700 [wandb_run.py:_config_callback():992] config_cb None None {}
+2022-04-13 08:00:32,577 INFO    MainThread:16700 [wandb_run.py:_config_callback():992] config_cb None None {}
+2022-04-13 08:05:34,668 INFO    MainThread:16700 [wandb_run.py:_config_callback():992] config_cb None None {}
+2022-04-13 08:10:47,500 INFO    MainThread:16700 [wandb_run.py:_config_callback():992] config_cb None None {}
+2022-04-13 08:15:33,837 INFO    MainThread:16700 [wandb_run.py:_config_callback():992] config_cb None None {}
+2022-04-13 08:20:41,542 INFO    MainThread:16700 [wandb_run.py:_config_callback():992] config_cb None None {}
+2022-04-13 08:25:50,890 INFO    MainThread:16700 [wandb_run.py:_config_callback():992] config_cb None None {}
+2022-04-13 08:31:24,152 INFO    MainThread:16700 [wandb_run.py:_config_callback():992] config_cb None None {}
+2022-04-13 08:36:46,607 INFO    MainThread:16700 [wandb_run.py:_config_callback():992] config_cb None None {}
+2022-04-13 08:42:00,490 INFO    MainThread:16700 [wandb_run.py:_config_callback():992] config_cb None None {}
+2022-04-13 08:47:09,140 INFO    MainThread:16700 [wandb_run.py:_config_callback():992] config_cb None None {}
+2022-04-13 08:52:19,130 INFO    MainThread:16700 [wandb_run.py:_config_callback():992] config_cb None None {}
+2022-04-13 08:57:26,476 INFO    MainThread:16700 [wandb_run.py:_config_callback():992] config_cb None None {}
+2022-04-13 09:02:14,212 INFO    MainThread:16700 [wandb_run.py:_config_callback():992] config_cb None None {}
+2022-04-13 09:07:07,145 INFO    MainThread:16700 [wandb_run.py:_config_callback():992] config_cb None None {}
+2022-04-13 09:11:53,521 INFO    MainThread:16700 [wandb_run.py:_config_callback():992] config_cb None None {}
+2022-04-13 09:16:58,449 INFO    MainThread:16700 [wandb_run.py:_config_callback():992] config_cb None None {}
+2022-04-13 09:21:56,145 INFO    MainThread:16700 [wandb_run.py:_config_callback():992] config_cb None None {}
+2022-04-13 09:26:45,904 INFO    MainThread:16700 [wandb_run.py:_config_callback():992] config_cb None None {}
+2022-04-13 09:31:49,633 INFO    MainThread:16700 [wandb_run.py:_config_callback():992] config_cb None None {}
+2022-04-13 09:36:38,038 INFO    MainThread:16700 [wandb_run.py:_config_callback():992] config_cb None None {}
+2022-04-13 09:41:17,003 INFO    MainThread:16700 [wandb_run.py:_config_callback():992] config_cb None None {}
+2022-04-13 09:45:38,480 INFO    MainThread:16700 [wandb_run.py:_config_callback():992] config_cb None None {}
+2022-04-13 09:50:24,515 INFO    MainThread:16700 [wandb_run.py:_config_callback():992] config_cb None None {}
+2022-04-13 09:55:02,253 INFO    MainThread:16700 [wandb_run.py:_config_callback():992] config_cb None None {}
+2022-04-13 09:59:46,480 INFO    MainThread:16700 [wandb_run.py:_config_callback():992] config_cb None None {}
+2022-04-13 10:04:25,079 INFO    MainThread:16700 [wandb_run.py:_config_callback():992] config_cb None None {}
+2022-04-13 10:09:01,461 INFO    MainThread:16700 [wandb_run.py:_config_callback():992] config_cb None None {}
+2022-04-13 10:13:44,514 INFO    MainThread:16700 [wandb_run.py:_config_callback():992] config_cb None None {}
+2022-04-13 10:18:13,927 INFO    MainThread:16700 [wandb_run.py:_config_callback():992] config_cb None None {}
+2022-04-13 10:22:48,132 INFO    MainThread:16700 [wandb_run.py:_config_callback():992] config_cb None None {}
+2022-04-13 10:27:13,523 INFO    MainThread:16700 [wandb_run.py:_config_callback():992] config_cb None None {}
+2022-04-13 10:31:37,072 INFO    MainThread:16700 [wandb_run.py:_config_callback():992] config_cb None None {}
+2022-04-13 10:35:59,328 INFO    MainThread:16700 [wandb_run.py:_config_callback():992] config_cb None None {}
+2022-04-13 10:40:25,563 INFO    MainThread:16700 [wandb_run.py:_config_callback():992] config_cb None None {}
+2022-04-13 10:45:05,629 INFO    MainThread:16700 [wandb_run.py:_config_callback():992] config_cb None None {}
+2022-04-13 10:49:50,764 INFO    MainThread:16700 [wandb_run.py:_config_callback():992] config_cb None None {}
+2022-04-13 10:54:33,916 INFO    MainThread:16700 [wandb_run.py:_config_callback():992] config_cb None None {}
+2022-04-13 10:59:14,219 INFO    MainThread:16700 [wandb_run.py:_config_callback():992] config_cb None None {}
+2022-04-13 11:03:58,619 INFO    MainThread:16700 [wandb_run.py:_config_callback():992] config_cb None None {}
+2022-04-13 11:08:38,037 INFO    MainThread:16700 [wandb_run.py:_config_callback():992] config_cb None None {}
+2022-04-13 11:13:23,781 INFO    MainThread:16700 [wandb_run.py:_config_callback():992] config_cb None None {}
+2022-04-13 11:18:08,711 INFO    MainThread:16700 [wandb_run.py:_config_callback():992] config_cb None None {}
+2022-04-13 11:22:54,462 INFO    MainThread:16700 [wandb_run.py:_config_callback():992] config_cb None None {}
+2022-04-13 11:27:39,194 INFO    MainThread:16700 [wandb_run.py:_config_callback():992] config_cb None None {}
+2022-04-13 11:32:18,229 INFO    MainThread:16700 [wandb_run.py:_config_callback():992] config_cb None None {}
+2022-04-13 11:37:03,855 INFO    MainThread:16700 [wandb_run.py:_config_callback():992] config_cb None None {}
+2022-04-13 11:41:37,591 INFO    MainThread:16700 [wandb_run.py:_config_callback():992] config_cb None None {}
+2022-04-13 11:46:17,651 INFO    MainThread:16700 [wandb_run.py:_config_callback():992] config_cb None None {}
+2022-04-13 11:51:02,958 INFO    MainThread:16700 [wandb_run.py:_config_callback():992] config_cb None None {}
+2022-04-13 11:55:28,826 INFO    MainThread:16700 [wandb_run.py:_config_callback():992] config_cb None None {}
+2022-04-13 11:59:32,472 INFO    MainThread:16700 [wandb_run.py:_config_callback():992] config_cb None None {}
+2022-04-13 12:03:54,102 INFO    MainThread:16700 [wandb_run.py:_config_callback():992] config_cb None None {}
+2022-04-13 12:08:25,245 INFO    MainThread:16700 [wandb_run.py:_config_callback():992] config_cb None None {}
+2022-04-13 12:12:58,758 INFO    MainThread:16700 [wandb_run.py:_config_callback():992] config_cb None None {}
+2022-04-13 12:17:24,719 INFO    MainThread:16700 [wandb_run.py:_config_callback():992] config_cb None None {}
+2022-04-13 12:21:58,993 INFO    MainThread:16700 [wandb_run.py:_config_callback():992] config_cb None None {}
+2022-04-13 12:26:36,947 INFO    MainThread:16700 [wandb_run.py:_config_callback():992] config_cb None None {}
+2022-04-13 12:31:12,641 INFO    MainThread:16700 [wandb_run.py:_config_callback():992] config_cb None None {}
+2022-04-13 12:35:56,710 INFO    MainThread:16700 [wandb_run.py:_config_callback():992] config_cb None None {}
+2022-04-13 12:40:36,669 INFO    MainThread:16700 [wandb_run.py:_config_callback():992] config_cb None None {}
+2022-04-13 12:44:54,374 INFO    MainThread:16700 [wandb_run.py:_config_callback():992] config_cb None None {}
+2022-04-13 12:48:58,774 INFO    MainThread:16700 [wandb_run.py:_config_callback():992] config_cb None None {}
+2022-04-13 12:53:05,550 INFO    MainThread:16700 [wandb_run.py:_config_callback():992] config_cb None None {}
+2022-04-13 12:57:47,155 INFO    MainThread:16700 [wandb_run.py:_config_callback():992] config_cb None None {}
+2022-04-13 13:02:32,092 INFO    MainThread:16700 [wandb_run.py:_config_callback():992] config_cb None None {}
+2022-04-13 13:07:08,083 INFO    MainThread:16700 [wandb_run.py:_config_callback():992] config_cb None None {}
+2022-04-13 13:11:11,929 INFO    MainThread:16700 [wandb_run.py:_config_callback():992] config_cb None None {}
+2022-04-13 13:15:39,564 INFO    MainThread:16700 [wandb_run.py:_config_callback():992] config_cb None None {}
+2022-04-13 13:20:00,927 INFO    MainThread:16700 [wandb_run.py:_config_callback():992] config_cb None None {}
+2022-04-13 13:24:44,475 INFO    MainThread:16700 [wandb_run.py:_config_callback():992] config_cb None None {}
+2022-04-13 13:29:08,887 INFO    MainThread:16700 [wandb_run.py:_config_callback():992] config_cb None None {}
+2022-04-13 13:30:58,655 INFO    MainThread:16700 [wandb_run.py:_atexit_cleanup():1702] got exitcode: 255
+2022-04-13 13:30:58,656 INFO    MainThread:16700 [wandb_run.py:_restore():1674] restore
+2022-04-13 13:30:59,580 INFO    MainThread:16700 [wandb_run.py:_on_finish():1831] got exit ret: file_counts {
+  wandb_count: 2
+  other_count: 1
+}
+pusher_stats {
+  uploaded_bytes: 10018
+  total_bytes: 10018
+  deduped_bytes: 1193
+}
+
+2022-04-13 13:30:59,692 INFO    MainThread:16700 [wandb_run.py:_on_finish():1831] got exit ret: file_counts {
+  wandb_count: 2
+  other_count: 1
+}
+pusher_stats {
+  uploaded_bytes: 10018
+  total_bytes: 10018
+  deduped_bytes: 1193
+}
+
+2022-04-13 13:31:00,264 INFO    MainThread:16700 [wandb_run.py:_on_finish():1831] got exit ret: file_counts {
+  wandb_count: 2
+  other_count: 1
+}
+pusher_stats {
+  uploaded_bytes: 10018
+  total_bytes: 10018
+  deduped_bytes: 1193
+}
+
+2022-04-13 13:31:00,610 INFO    MainThread:16700 [wandb_run.py:_on_finish():1831] got exit ret: file_counts {
+  wandb_count: 6
+  other_count: 1
+}
+pusher_stats {
+  uploaded_bytes: 10018
+  total_bytes: 257300
+  deduped_bytes: 1193
+}
+
+2022-04-13 13:31:00,714 INFO    MainThread:16700 [wandb_run.py:_on_finish():1831] got exit ret: file_counts {
+  wandb_count: 6
+  other_count: 1
+}
+pusher_stats {
+  uploaded_bytes: 10018
+  total_bytes: 257300
+  deduped_bytes: 1193
+}
+
+2022-04-13 13:31:00,822 INFO    MainThread:16700 [wandb_run.py:_on_finish():1831] got exit ret: file_counts {
+  wandb_count: 6
+  other_count: 1
+}
+pusher_stats {
+  uploaded_bytes: 10018
+  total_bytes: 257300
+  deduped_bytes: 1193
+}
+
+2022-04-13 13:31:00,930 INFO    MainThread:16700 [wandb_run.py:_on_finish():1831] got exit ret: file_counts {
+  wandb_count: 6
+  other_count: 1
+}
+pusher_stats {
+  uploaded_bytes: 190272
+  total_bytes: 257300
+  deduped_bytes: 1193
+}
+
+2022-04-13 13:31:01,036 INFO    MainThread:16700 [wandb_run.py:_on_finish():1831] got exit ret: file_counts {
+  wandb_count: 6
+  other_count: 1
+}
+pusher_stats {
+  uploaded_bytes: 246187
+  total_bytes: 257300
+  deduped_bytes: 1193
+}
+
+2022-04-13 13:31:01,144 INFO    MainThread:16700 [wandb_run.py:_on_finish():1831] got exit ret: file_counts {
+  wandb_count: 6
+  other_count: 1
+}
+pusher_stats {
+  uploaded_bytes: 257300
+  total_bytes: 257300
+  deduped_bytes: 1193
+}
+
+2022-04-13 13:31:01,251 INFO    MainThread:16700 [wandb_run.py:_on_finish():1831] got exit ret: file_counts {
+  wandb_count: 6
+  other_count: 1
+}
+pusher_stats {
+  uploaded_bytes: 257300
+  total_bytes: 257300
+  deduped_bytes: 1193
+}
+
+2022-04-13 13:31:01,360 INFO    MainThread:16700 [wandb_run.py:_on_finish():1831] got exit ret: file_counts {
+  wandb_count: 6
+  other_count: 1
+}
+pusher_stats {
+  uploaded_bytes: 257300
+  total_bytes: 257300
+  deduped_bytes: 1193
+}
+
+2022-04-13 13:31:01,472 INFO    MainThread:16700 [wandb_run.py:_on_finish():1831] got exit ret: file_counts {
+  wandb_count: 6
+  other_count: 1
+}
+pusher_stats {
+  uploaded_bytes: 257300
+  total_bytes: 257300
+  deduped_bytes: 1193
+}
+
+2022-04-13 13:31:01,582 INFO    MainThread:16700 [wandb_run.py:_on_finish():1831] got exit ret: file_counts {
+  wandb_count: 6
+  other_count: 1
+}
+pusher_stats {
+  uploaded_bytes: 257300
+  total_bytes: 257300
+  deduped_bytes: 1193
+}
+
+2022-04-13 13:31:02,151 INFO    MainThread:16700 [wandb_run.py:_on_finish():1831] got exit ret: file_counts {
+  wandb_count: 6
+  other_count: 1
+}
+pusher_stats {
+  uploaded_bytes: 257300
+  total_bytes: 257300
+  deduped_bytes: 1193
+}
+
+2022-04-13 13:31:02,621 INFO    MainThread:16700 [wandb_run.py:_on_finish():1831] got exit ret: done: true
+exit_result {
+}
+file_counts {
+  wandb_count: 6
+  other_count: 1
+}
+pusher_stats {
+  uploaded_bytes: 257300
+  total_bytes: 257300
+  deduped_bytes: 1193
+}
+local_info {
+}
+
+2022-04-13 13:31:03,932 INFO    MainThread:16700 [wandb_run.py:_footer_history_summary_info():2865] rendering history
+2022-04-13 13:31:03,932 INFO    MainThread:16700 [wandb_run.py:_footer_history_summary_info():2894] rendering summary
+2022-04-13 13:31:03,933 INFO    MainThread:16700 [wandb_run.py:_footer_sync_info():2822] logging synced files

@@ -1,0 +1,22 @@
+{
+    "os": "Windows-10-10.0.19041-SP0",
+    "python": "3.9.0",
+    "heartbeatAt": "2022-04-13T20:42:12.677385",
+    "startedAt": "2022-04-13T20:42:09.881587",
+    "docker": null,
+    "cpu_count": 16,
+    "cuda": null,
+    "args": [],
+    "state": "running",
+    "program": "c:\\Users\\zacle\\Documents\\AirsoftAI\\AirsoftAI\\train.py",
+    "codePath": "AirsoftAI\\train.py",
+    "git": {
+        "remote": "https://github.com/SpideyZac/AirsoftAI.git",
+        "commit": "8f99e6c1c610d7dfd50e0097113d67909491906c"
+    },
+    "email": "66804504+SpideyZac@users.noreply.github.com",
+    "root": "C:/Users/zacle/Documents/AirsoftAI",
+    "host": "DESKTOP-GEDU77K",
+    "username": "zacle",
+    "executable": "C:\\Users\\zacle\\AppData\\Local\\Programs\\Python\\Python39\\python.exe"
+}

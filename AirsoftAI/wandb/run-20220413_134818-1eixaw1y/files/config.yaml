@@ -1,0 +1,267 @@
+wandb_version: 1
+
+_current_progress_remaining:
+  desc: null
+  value: -0.001759675136897787
+_custom_logger:
+  desc: null
+  value: 'False'
+_episode_num:
+  desc: null
+  value: 0
+_last_episode_starts:
+  desc: null
+  value: '[ True]'
+_last_obs:
+  desc: null
+  value: "[[   1.         1.         1.         1.         1.         1.\n     1.\
+    \         1.         1.         1.         1.         1.\n     1.         1. \
+    \        1.         1.         1.         1.\n     1.         1.         1.  \
+    \       1.         1.         1.\n     1.         1.         1.         1.   \
+    \      1.         1.\n     1.         1.         1.         1.         1.    \
+    \     1.\n     1.         1.         1.         1.         1.         1.\n   \
+    \  1.         1.         1.         1.         1.         1.\n     1.        \
+    \ 1.         1.         1.         1.         1.\n     1.         1.         1.\
+    \         1.         1.         1.\n     1.         1.         1.         1. \
+    \        1.         1.\n     1.         1.         1.         1.         1.  \
+    \       1.\n     1.         1.         1.         1.         1.         1.\n \
+    \    1.         1.         1.         1.         1.         1.\n     1.      \
+    \   1.         1.         1.         1.         1.\n     9.        11.       270.\
+    \         0.         0.         0.\n    30.        90.      -129.28941]]"
+_last_original_obs:
+  desc: null
+  value: None
+_logger:
+  desc: null
+  value: <stable_baselines3.common.logger.Logger object at 0x0000025D5D44E340>
+_n_updates:
+  desc: null
+  value: 3180
+_num_timesteps_at_start:
+  desc: null
+  value: 651264
+_total_timesteps:
+  desc: null
+  value: 656264
+_vec_normalize_env:
+  desc: null
+  value: None
+_wandb:
+  desc: null
+  value:
+    cli_version: 0.12.11
+    code_path: code/AirsoftAI/train.py
+    framework: torch
+    is_jupyter_run: false
+    is_kaggle_kernel: false
+    python_version: 3.9.0
+    start_time: 1649882898
+    t:
+      1:
+      - 1
+      - 2
+      - 3
+      2:
+      - 1
+      - 2
+      - 3
+      3:
+      - 16
+      - 22
+      - 35
+      4: 3.9.0
+      5: 0.12.11
+      8:
+      - 3
+      - 5
+action_noise:
+  desc: null
+  value: None
+action_space:
+  desc: null
+  value: Box([-inf -inf -inf -inf -inf -inf -inf -inf -inf], [inf inf inf inf inf
+    inf inf inf inf], (9,), float32)
+algo:
+  desc: null
+  value: PPO
+batch_size:
+  desc: null
+  value: 64
+clip_range:
+  desc: null
+  value: <function constant_fn.<locals>.func at 0x0000025D5D465310>
+clip_range_vf:
+  desc: null
+  value: None
+device:
+  desc: null
+  value: cpu
+ent_coef:
+  desc: null
+  value: 0.0
+env:
+  desc: null
+  value: <stable_baselines3.common.vec_env.dummy_vec_env.DummyVecEnv object at 0x0000025D5D44E880>
+env_name:
+  desc: null
+  value: CartPole-v1
+ep_info_buffer:
+  desc: null
+  value: 'deque([{''r'': -1001, ''l'': 165, ''t'': 20934.024247}, {''r'': -1001, ''l'':
+    152, ''t'': 20940.854984}, {''r'': -1001, ''l'': 77, ''t'': 20944.292785}, {''r'':
+    -1001, ''l'': 79, ''t'': 20947.704566}, {''r'': 1001.1, ''l'': 51, ''t'': 20950.246766},
+    {''r'': -1001, ''l'': 94, ''t'': 20954.809566}, {''r'': 1001.1, ''l'': 122, ''t'':
+    20960.798553}, {''r'': -1001, ''l'': 296, ''t'': 20974.986667}, {''r'': -1001,
+    ''l'': 28, ''t'': 20976.145566}, {''r'': 1001.1, ''l'': 160, ''t'': 20983.343045},
+    {''r'': 1001.1, ''l'': 116, ''t'': 20988.978192}, {''r'': 1001.1, ''l'': 203,
+    ''t'': 20998.665595}, {''r'': 1001.1, ''l'': 123, ''t'': 21004.300626}, {''r'':
+    1001.1, ''l'': 113, ''t'': 21010.038423}, {''r'': -1001, ''l'': 211, ''t'': 21020.103801},
+    {''r'': 1001.1, ''l'': 196, ''t'': 21029.730422}, {''r'': -1001, ''l'': 135, ''t'':
+    21036.609333}, {''r'': -1001, ''l'': 78, ''t'': 21040.658286}, {''r'': -1001,
+    ''l'': 101, ''t'': 21045.075839}, {''r'': 1001.1, ''l'': 160, ''t'': 21052.113996},
+    {''r'': -1001, ''l'': 319, ''t'': 21066.871437}, {''r'': 1001.1, ''l'': 109, ''t'':
+    21072.053042}, {''r'': 1001.1, ''l'': 209, ''t'': 21081.575712}, {''r'': 1001.1,
+    ''l'': 153, ''t'': 21088.760347}, {''r'': 1001.1, ''l'': 37, ''t'': 21090.535012},
+    {''r'': 0, ''l'': 5001, ''t'': 21280.349193}, {''r'': 1001.1, ''l'': 224, ''t'':
+    21290.227478}, {''r'': -1001, ''l'': 282, ''t'': 21302.832837}, {''r'': 1001.1,
+    ''l'': 169, ''t'': 21310.297216}, {''r'': -1001, ''l'': 79, ''t'': 21313.770929},
+    {''r'': -1001, ''l'': 295, ''t'': 21328.74985}, {''r'': 1001.1, ''l'': 113, ''t'':
+    21333.510574}, {''r'': 1001.1, ''l'': 40, ''t'': 21335.183138}, {''r'': 1001.1,
+    ''l'': 71, ''t'': 21338.57903}, {''r'': 1001.1, ''l'': 124, ''t'': 21343.510163},
+    {''r'': -1001, ''l'': 67, ''t'': 21346.595692}, {''r'': 1001.1, ''l'': 327, ''t'':
+    21362.301282}, {''r'': -1001, ''l'': 105, ''t'': 21367.9619}, {''r'': -1001, ''l'':
+    142, ''t'': 21374.927277}, {''r'': 1001.1, ''l'': 172, ''t'': 21382.425614}, {''r'':
+    -1001, ''l'': 132, ''t'': 21388.94319}, {''r'': 1001.1, ''l'': 478, ''t'': 21409.314242},
+    {''r'': -1001, ''l'': 71, ''t'': 21413.009647}, {''r'': -1001, ''l'': 131, ''t'':
+    21418.932808}, {''r'': 1001.1, ''l'': 137, ''t'': 21424.662489}, {''r'': -1001,
+    ''l'': 127, ''t'': 21430.897815}, {''r'': -1001, ''l'': 165, ''t'': 21438.72282},
+    {''r'': 1001.1, ''l'': 102, ''t'': 21443.490487}, {''r'': 1001.1, ''l'': 56, ''t'':
+    21446.525366}, {''r'': -1001, ''l'': 88, ''t'': 21450.749664}, {''r'': 1001.1,
+    ''l'': 119, ''t'': 21455.61448}, {''r'': 1001.1, ''l'': 313, ''t'': 21470.598503},
+    {''r'': 1001.1, ''l'': 280, ''t'': 21484.173975}, {''r'': -1001, ''l'': 349, ''t'':
+    21498.714585}, {''r'': -1001, ''l'': 182, ''t'': 21506.795583}, {''r'': -1001,
+    ''l'': 159, ''t'': 21514.366406}, {''r'': 1001.1, ''l'': 60, ''t'': 21517.082312},
+    {''r'': 1001.1, ''l'': 161, ''t'': 21524.015744}, {''r'': 1001.1, ''l'': 160,
+    ''t'': 21531.618495}, {''r'': -1001, ''l'': 36, ''t'': 21533.280793}, {''r'':
+    1001.1, ''l'': 482, ''t'': 21556.150373}, {''r'': 1001.1, ''l'': 334, ''t'': 21571.704305},
+    {''r'': 1001.1, ''l'': 203, ''t'': 21580.07285}, {''r'': 1001.1, ''l'': 166, ''t'':
+    21588.086265}, {''r'': 1001.1, ''l'': 415, ''t'': 21607.65574}, {''r'': 1001.1,
+    ''l'': 139, ''t'': 21613.143295}, {''r'': 1001.1, ''l'': 235, ''t'': 21623.942523},
+    {''r'': -1001, ''l'': 280, ''t'': 21636.15918}, {''r'': -1001, ''l'': 355, ''t'':
+    21653.415554}, {''r'': -1001, ''l'': 35, ''t'': 21654.986354}, {''r'': -1001,
+    ''l'': 142, ''t'': 21662.277323}, {''r'': -1001, ''l'': 165, ''t'': 21670.291892},
+    {''r'': 1001.1, ''l'': 93, ''t'': 21674.345984}, {''r'': 1001.1, ''l'': 113, ''t'':
+    21679.158285}, {''r'': -1001, ''l'': 386, ''t'': 21697.170301}, {''r'': 1001.1,
+    ''l'': 66, ''t'': 21700.439739}, {''r'': 1001.1, ''l'': 104, ''t'': 21705.622877},
+    {''r'': 1001.1, ''l'': 118, ''t'': 21711.412395}, {''r'': -1001, ''l'': 248, ''t'':
+    21722.395208}, {''r'': -1001, ''l'': 191, ''t'': 21731.084074}, {''r'': -1001,
+    ''l'': 46, ''t'': 21733.330683}, {''r'': -1001, ''l'': 145, ''t'': 21739.867207},
+    {''r'': 1001.1, ''l'': 253, ''t'': 21752.589367}, {''r'': 1001.1, ''l'': 191,
+    ''t'': 21760.894122}, {''r'': 1001.1, ''l'': 148, ''t'': 21767.374054}, {''r'':
+    1001.1, ''l'': 74, ''t'': 21770.610365}, {''r'': 1001.1, ''l'': 110, ''t'': 21776.236173},
+    {''r'': 1001.1, ''l'': 188, ''t'': 21784.827568}, {''r'': -1001, ''l'': 281, ''t'':
+    21797.385289}, {''r'': 1001.1, ''l'': 100, ''t'': 21802.412275}, {''r'': 1001.1,
+    ''l'': 103, ''t'': 21807.494934}, {''r'': -1001, ''l'': 289, ''t'': 21820.546499},
+    {''r'': 1001.1, ''l'': 247, ''t'': 21832.258541}, {''r'': 1001.1, ''l'': 56, ''t'':
+    21834.905818}, {''r'': -1001, ''l'': 246, ''t'': 21846.965184}, {''r'': 1001.1,
+    ''l'': 93, ''t'': 21851.48809}, {''r'': -1001, ''l'': 72, ''t'': 21855.212128},
+    {''r'': 1001.1, ''l'': 173, ''t'': 21862.972528}, {''r'': -1001, ''l'': 109, ''t'':
+    21868.040527}, {''r'': 1001.1, ''l'': 143, ''t'': 21874.457344}], maxlen=100)'
+ep_success_buffer:
+  desc: null
+  value: deque([], maxlen=100)
+eval_env:
+  desc: null
+  value: None
+gae_lambda:
+  desc: null
+  value: 0.95
+gamma:
+  desc: null
+  value: 0.99
+learning_rate:
+  desc: null
+  value: 0.0003
+lr_schedule:
+  desc: null
+  value: <function constant_fn.<locals>.func at 0x0000025D5D4653A0>
+max_grad_norm:
+  desc: null
+  value: 0.5
+n_envs:
+  desc: null
+  value: 1
+n_epochs:
+  desc: null
+  value: 10
+n_steps:
+  desc: null
+  value: 2048
+num_timesteps:
+  desc: null
+  value: 651264
+observation_space:
+  desc: null
+  value: "Box([-inf -inf -inf -inf -inf -inf -inf -inf -inf -inf -inf -inf -inf -inf\n\
+    \ -inf -inf -inf -inf -inf -inf -inf -inf -inf -inf -inf -inf -inf -inf\n -inf\
+    \ -inf -inf -inf -inf -inf -inf -inf -inf -inf -inf -inf -inf -inf\n -inf -inf\
+    \ -inf -inf -inf -inf -inf -inf -inf -inf -inf -inf -inf -inf\n -inf -inf -inf\
+    \ -inf -inf -inf -inf -inf -inf -inf -inf -inf -inf -inf\n -inf -inf -inf -inf\
+    \ -inf -inf -inf -inf -inf -inf -inf -inf -inf -inf\n -inf -inf -inf -inf -inf\
+    \ -inf -inf -inf -inf -inf -inf -inf -inf -inf\n -inf], [inf inf inf inf inf inf\
+    \ inf inf inf inf inf inf inf inf inf inf inf inf\n inf inf inf inf inf inf inf\
+    \ inf inf inf inf inf inf inf inf inf inf inf\n inf inf inf inf inf inf inf inf\
+    \ inf inf inf inf inf inf inf inf inf inf\n inf inf inf inf inf inf inf inf inf\
+    \ inf inf inf inf inf inf inf inf inf\n inf inf inf inf inf inf inf inf inf inf\
+    \ inf inf inf inf inf inf inf inf\n inf inf inf inf inf inf inf inf inf], (99,),\
+    \ float32)"
+policy:
+  desc: null
+  value: "ActorCriticPolicy(\n  (features_extractor): FlattenExtractor(\n    (flatten):\
+    \ Flatten(start_dim=1, end_dim=-1)\n  )\n  (mlp_extractor): MlpExtractor(\n  \
+    \  (shared_net): Sequential()\n    (policy_net): Sequential(\n      (0): Linear(in_features=99,\
+    \ out_features=64, bias=True)\n      (1): Tanh()\n      (2): Linear(in_features=64,\
+    \ out_features=64, bias=True)\n      (3): Tanh()\n    )\n    (value_net): Sequential(\n\
+    \      (0): Linear(in_features=99, out_features=64, bias=True)\n      (1): Tanh()\n\
+    \      (2): Linear(in_features=64, out_features=64, bias=True)\n      (3): Tanh()\n\
+    \    )\n  )\n  (action_net): Linear(in_features=64, out_features=9, bias=True)\n\
+    \  (value_net): Linear(in_features=64, out_features=1, bias=True)\n)"
+policy_class:
+  desc: null
+  value: <class 'stable_baselines3.common.policies.ActorCriticPolicy'>
+policy_kwargs:
+  desc: null
+  value: '{}'
+policy_type:
+  desc: null
+  value: MlpPolicy
+rollout_buffer:
+  desc: null
+  value: <stable_baselines3.common.buffers.RolloutBuffer object at 0x0000025D5D44E520>
+sde_sample_freq:
+  desc: null
+  value: -1
+seed:
+  desc: null
+  value: None
+start_time:
+  desc: null
+  value: 1649882901.5547504
+target_kl:
+  desc: null
+  value: None
+tensorboard_log:
+  desc: null
+  value: None
+total_timesteps:
+  desc: null
+  value: 5000
+use_sde:
+  desc: null
+  value: 'False'
+verbose:
+  desc: null
+  value: 1
+vf_coef:
+  desc: null
+  value: 0.5

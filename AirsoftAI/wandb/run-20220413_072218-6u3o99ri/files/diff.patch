@@ -1,0 +1,203 @@
+diff --git a/AirsoftAI/gym_airsoft.py b/AirsoftAI/gym_airsoft.py
+index 58e020e..97a1eb7 100644
+--- a/AirsoftAI/gym_airsoft.py
++++ b/AirsoftAI/gym_airsoft.py
+@@ -32,7 +32,7 @@ class Player:
+                 self.y -= self.speed
+ 
+     def down(self):
+-        if self.y + self.speed < 13:
++        if self.y + self.speed < len(map_w.MAP):
+             for wall in map_w.walls:
+                 if collision(self.x, self.y + self.speed, wall[0], wall[1], 1, 1, 1, 1):
+                     break
+@@ -40,7 +40,7 @@ class Player:
+                 self.y += self.speed
+ 
+     def right(self):
+-        if self.x + self.speed < 11:
++        if self.x + self.speed < len(map_w.MAP[0]):
+             for wall in map_w.walls:
+                 if collision(self.x + self.speed, self.y, wall[0], wall[1], 1, 1, 1, 1):
+                     break
+@@ -48,7 +48,7 @@ class Player:
+                 self.x += self.speed
+     
+     def left(self):
+-        if self.x - self.speed > 0:
++        if self.x - self.speed > -1:
+             for wall in map_w.walls:
+                 if collision(self.x - self.speed, self.y, wall[0], wall[1], 1, 1, 1, 1):
+                     break
+@@ -66,17 +66,19 @@ class AirsoftEnv(gym.Env):
+ 
+     def __init__(self, start_model = None):
+         self.selfplay = start_model
+-        self.action_space = spaces.Box(low=-np.inf, high=np.inf, shape=(7,))
+-        self.observation_space = spaces.Box(low=-np.inf, high=np.inf, shape=(98,))
++        self.action_space = spaces.Box(low=-np.inf, high=np.inf, shape=(9,))
++        self.observation_space = spaces.Box(low=-np.inf, high=np.inf, shape=(99,))
+         self.players = [Player(self.p1x, self.p1y, 1), Player(self.p2x, self.p2y, -1)]
+         self.IS_PLAYER1 = random.random() <= 0.5
+         self.iteration = 0
+         self.rays = []
++        self.sr = []
+ 
+         self.screen = None
+         self.clock = None
+ 
+     def reset(self):
++        self.sr = []
+         self.players = [Player(self.p1x, self.p1y, 1), Player(self.p2x, self.p2y, -1)]
+         self.IS_PLAYER1 = random.random() <= 0.5
+         self.iteration = 0
+@@ -107,6 +109,7 @@ class AirsoftEnv(gym.Env):
+         obs.append(player.seeny)
+         obs.append(player.ammo)
+         obs.append(player.ammoT)
++        obs.append(np.degrees(np.arctan2(player.seeny - player.y, player.seenx - player.x)))
+ 
+         return obs
+ 
+@@ -120,7 +123,9 @@ class AirsoftEnv(gym.Env):
+         done = False
+         reward = 0
+ 
+-        move = np.argmax(action[0:4])
++        p.rot = action[8]
++
++        move = np.argmax(action[0:5])
+ 
+         if move == 0:
+             p.up()
+@@ -131,11 +136,15 @@ class AirsoftEnv(gym.Env):
+         else:
+             p.left()
+ 
+-        move = np.argmax(action[4:6])
++        move = np.argmax(action[5:8])
+ 
+         if move == 0:
+             if p.ammo > 0:
+                 shoot_ray = ray(p.x, p.y, p.rot, map_w.walls, o.x, o.y)
++                if shoot_ray[1]:
++                    self.sr.append([p.x, p.y, o.x, o.y])
++                else:
++                    self.sr.append([p.x, p.y, shoot_ray[2], shoot_ray[3]])
+                 if distance(shoot_ray[2], shoot_ray[3], o.x, o.y) <= self.DISTANCE_RADIUS and acPlayer:
+                     reward += 0.1
+                 if shoot_ray[1]:
+@@ -144,16 +153,16 @@ class AirsoftEnv(gym.Env):
+                         reward += 1001
+                     else:
+                         reward -= 1001
++                p.ammo -= 1
+         elif move == 1:
+             self.reload(p)
+-        
+-        p.rot = action[6]
+ 
+         return reward, done
+ 
+     def step(self, action):
+         done = self.iteration >= self.MAX_ITER
+         reward = 0
++        self.sr = []
+         
+         if self.IS_PLAYER1:
+             p = self.players[0]
+@@ -168,7 +177,7 @@ class AirsoftEnv(gym.Env):
+                 if self.selfplay is None:
+                     reward, done = self.get_action(self.action_space.sample(), o, p, False)
+                 else:
+-                    reward, done = self.get_action(self.selfplay.predict(self.get_obs(o, p)), o, p, False)
++                    reward, done = self.get_action(self.selfplay.predict(self.get_obs(o, p))[0], o, p, False)
+ 
+         self.iteration += 1
+ 
+@@ -178,37 +187,28 @@ class AirsoftEnv(gym.Env):
+         if self.screen is None:
+             pygame.init()
+             pygame.display.init()
+-            self.screen = pygame.display.set_mode((500, 500))
++            self.screen = pygame.display.set_mode((500, 500), pygame.RESIZABLE)
++            pygame.display.set_caption("Airsoft Game")
+         if self.clock is None:
+             self.clock = pygame.time.Clock()
+ 
+         self.screen.fill((0, 0, 0))
+ 
+-        w = 500/11
+-        h = 500/13
++        x, y = self.screen.get_size()
++
++        w = x/len(map_w.MAP[0])
++        h = y/len(map_w.MAP)
+ 
+         pygame.draw.rect(self.screen, (255, 0, 0), pygame.Rect(self.players[0].x * w, self.players[0].y * h, 1 * w, 1 * h))
+         pygame.draw.rect(self.screen, (255, 0, 0), pygame.Rect(self.players[1].x * w, self.players[1].y * h, 1 * w, 1 * h))
+-        
+-        f = forward(self.players[0].x, self.players[0].y, self.players[0].rot)
+-        pygame.draw.rect(self.screen, (0, 0, 255), pygame.Rect(self.players[0].x * w + f[0] * w, self.players[0].y * h + f[1] * h, 0.5 * w, 0.5 * h))
+-        f = forward(self.players[1].x, self.players[1].y, self.players[1].rot)
+-        pygame.draw.rect(self.screen, (0, 0, 255), pygame.Rect(self.players[1].x * w + f[0] * w, self.players[1].y * h + f[1] * h, 0.5 * w, 0.5 * h))
++        pygame.draw.circle(self.screen, (0, 255, 255), (self.players[0].x * w, self.players[0].y * h), 5)
++        pygame.draw.circle(self.screen, (0, 255, 255), (self.players[1].x * w, self.players[1].y * h), 5)
+ 
+         for i in range(len(map_w.walls)):
+             pygame.draw.rect(self.screen, (255, 255, 255), pygame.Rect(map_w.walls[i][0] * w, map_w.walls[i][1] * h, 1 * w, 1 * h))
+ 
+-        i = round(len(self.rays[0:90]) / 2 - 1)
+-        if self.IS_PLAYER1:
+-            pygame.draw.line(self.screen, (255, 0, 255), (self.players[0].x * w, self.players[0].y * h), (self.rays[i][2] * w, self.rays[i][3] * h))
+-        else:
+-            pygame.draw.line(self.screen, (255, 0, 255), (self.players[1].x * w, self.players[1].y * h), (self.rays[i][2] * w, self.rays[i][3] * h))
+-
+-        i = round(len(self.rays[90:len(self.rays)]) / 2 - 1)
+-        if self.IS_PLAYER1:
+-            pygame.draw.line(self.screen, (255, 0, 255), (self.players[1].x * w, self.players[1].y * h), (self.rays[i][2] * w, self.rays[i][3] * h))
+-        else:
+-            pygame.draw.line(self.screen, (255, 0, 255), (self.players[0].x * w, self.players[0].y * h), (self.rays[i][2] * w, self.rays[i][3] * h))
++        for i in range(len(self.sr)):
++            pygame.draw.line(self.screen, (255, 0, 255), (self.sr[i][0] * w, self.sr[i][1] * h), (self.sr[i][2] * w, self.sr[i][3] * h))
+ 
+         if mode == "human":
+             pygame.event.pump()
+@@ -220,4 +220,4 @@ class AirsoftEnv(gym.Env):
+                 np.array(pygame.surfarray.pixels3d(self.screen)), axes=(1, 0, 2)
+             )
+         else:
+-            return ""
+\ No newline at end of file
++            return True
+\ No newline at end of file
+diff --git a/AirsoftAI/map_w.py b/AirsoftAI/map_w.py
+index 594e253..043061c 100644
+--- a/AirsoftAI/map_w.py
++++ b/AirsoftAI/map_w.py
+@@ -1,4 +1,4 @@
+-'''MAP = [
++MAP = [
+     [1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1],
+     [1, 0, 0, 0, 0, 1, 0, 0, 0, 0, 1],
+     [1, 1, 1, 0, 0, 0, 0, 0, 1, 1, 1],
+@@ -12,8 +12,8 @@
+     [1, 1, 1, 0, 0, 0, 0, 0, 1, 1, 1],
+     [1, 0, 0, 0, 0, 1, 0, 0, 0, 0, 1],
+     [1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1]
+-]'''
+-MAP = [
++]
++'''MAP = [
+     [1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1],
+     [1, 0, 0, 0, 0, 0, 0, 0, 0, 0, 1],
+     [1, 0, 0, 0, 0, 0, 0, 0, 0, 0, 1],
+@@ -27,7 +27,7 @@ MAP = [
+     [1, 0, 0, 0, 0, 0, 0, 0, 0, 0, 1],
+     [1, 0, 0, 0, 0, 0, 0, 0, 0, 0, 1],
+     [1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1]
+-]
++]'''
+ 
+ walls = []
+ for i in range(len(MAP)):
